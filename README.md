@@ -1,1 +1,1 @@
-# Simple site to show toy-projects
+# Simple portfolio website

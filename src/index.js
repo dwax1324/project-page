@@ -2,8 +2,11 @@ import './css/index.css'
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Admin from './pages/Admin'
-import App from './App';
+import Home from './Home';
 import Card from './components/Card';
+import Projects from './pages/Projects'
+import Upperbar from './components/Upperbar'
+import About from './pages/About'
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,16 +18,26 @@ import {
 
 ReactDOM.render(
   <>
+
     <Router>
+
+      <Upperbar />
       <Route exact path="/admin">
         <Admin />
       </Route>
       <Route exact path="/">
-        <App />
+        <Home />
       </Route>
       <Route exact path="/card">
         <Card />
       </Route>
+      <Route exact path="/projects">
+        <Projects />
+      </Route>
+      <Route exact path="/about">
+        <About />
+      </Route>
+
 
     </Router>
   </>,

@@ -4,16 +4,15 @@ import Upperbar from './components/Upperbar.jsx'
 
 
 
-function App() {
+function Home() {
   return (
     <div>
-      <Upperbar />
-
+      home
     </div>
   );
 }
 
-export default App;
+export default Home;
 
 /*
 

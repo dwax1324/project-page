@@ -2,13 +2,13 @@ import firebase from "firebase/app";
 import 'firebase/firestore';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCNhVAXhBKetGJhQWymCQSeY_rLCmudJ5w",
-    authDomain: "pj-pages.firebaseapp.com",
-    projectId: "pj-pages",
-    storageBucket: "pj-pages.appspot.com",
-    messagingSenderId: "579490492722",
-    appId: "1:579490492722:web:d089adb40af9621c79272b",
-    measurementId: "G-REY56NJMLV"
+    apiKey: process.env.REACT_APP_API_KEY,
+    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+    projectId: process.env.REACT_APP_PORJECT_ID,
+    storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_APP_ID,
+    measurementId: process.env.REACT_APP_MEASUREMENT_ID
 };
 
 firebase.initializeApp(firebaseConfig);
