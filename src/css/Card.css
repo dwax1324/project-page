@@ -19,9 +19,9 @@
 }
 
 .card-box:hover{
-    transition-duration: 0.5s;
-    transform: scale(1.02);
     cursor:pointer;
+    transform: scale(1.05);
+    transition: all .1s;
 }
 
 .card-title{
@@ -38,4 +38,64 @@
     font-size: 40px;
 
 }
+
+input[id*='popup']{
+    display:none;
+}
+input[id*='popup'] + label{
+    /* display: inline-block; */
+}
+input[id*="popup"]+label+div{
+    position :fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:100;
+}
+
+
+input[id*="popup"]+label+div >div{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:800px;
+    height:600px;
+    overflow:scroll;
+
+    background-color: white;
+    z-index:2;
+}
+input[id*="popup"]+label+div >div > label{
+    position: absolute;
+    top:0%;
+    right:0%;
+    transform:translate(40%,-40%);
+    padding:20px;
+    background-color: red;
+    border-radius: 100%;
+    z-index:1;
+}
+
+input[id*="popup"]+label+div > label{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,.9);
+    z-index:1;
+}
+
+input[id*="popup"]+label+div{
+    opacity:0;
+    visibility: hidden;
+    transition:all .2s;
+}
+input[id*="popup"]:checked+label+div{
+    opacity: 1;
+    visibility: visible;
+}
+
 
