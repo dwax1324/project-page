@@ -2,6 +2,8 @@ import "../css/Card.css"
 import React, { useState, useEffect } from "react";
 import firebase from "../firebase"
 
+
+// to fix : toy(collection)
 function useCard() {
     const [card, setCard] = useState([])
 
@@ -20,40 +22,26 @@ function useCard() {
 
 
 
+const imgURL = "https://raw.githubusercontent.com/dwax1324/10print/master/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C%20(1).png"
 const Card = () => {
 
     let cards = useCard()
-    // debugger
-    // for (let i = 0; i < 100; i++) {
-    //     console.log(cards)
-    // }
     return (
         <div className="card-container">
             {
                 cards?.map((c) =>
                     <div className="card-box">
+                        <img src={c?.img} className="card-img">
+
+                        </img>
                         <div className="card-title">
                             {c?.title}
-                        </div>
-                        <div className="card-description">
-                            {c?.description}
                         </div>
                     </div>
                 )
 
             }
-        </div>
+        </div >
     );
 }
 export default Card;
-
-/*
-
-About
-
-Choi Woojong , 최우종
-SungKyunKwan University, 성균관대학교
-major : biological science, 전공 : 생명과학과
-double major : computer science, 복수전공: 융합소프트웨어연계전공
-
-*/

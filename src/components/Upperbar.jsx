@@ -7,7 +7,7 @@ const Upperbar = () => {
 
                 <div className="ub-title">
                     <p>
-                        hello this is my world
+                        XORDEN
                     </p>
                 </div>
             </div>

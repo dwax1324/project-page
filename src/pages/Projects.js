@@ -1,7 +1,12 @@
+import Card from "../components/Card"
+
 const Projects = () => {
     return (
         <>
-            projects
+            <div className="project-container">
+                projects
+                <Card />
+            </div>
         </>
     )
 
