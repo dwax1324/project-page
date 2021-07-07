@@ -1,49 +1,50 @@
-import "../css/Card.css"
-import React, { useState, useEffect } from "react";
-import firebase from "../firebase"
+// import "../css/Card.css"
+// import React, { useState, useEffect } from "react";
+// import firebase from "../firebase"
 
-function useCard() {
-    const [card, setCard] = useState([])
+// function useCard() {
+//     const [card, setCard] = useState([])
 
-    useEffect(() => {
-        firebase.firestore().collection('toy').onSnapshot((snapshot) => {
+//     useEffect(() => {
+//         firebase.firestore().collection('toy').onSnapshot((snapshot) => {
 
-            const newCard = snapshot.docs.map((doc) => ({
-                id: doc.id,
-                ...doc.data()
-            }))
-            setCard(newCard)
-        })
-    }, [])
-    return card
-}
+//             const newCard = snapshot.docs.map((doc) => ({
+//                 id: doc.id,
+//                 ...doc.data()
+//             }))
+//             setCard(newCard)
+//         })
+//     }, [])
+//     return card
+// }
 
 
 
 const Card = () => {
+    return <span>3</span>
 
-    let cards = useCard()
+    // let cards = useCard()
     // debugger
     // for (let i = 0; i < 100; i++) {
     //     console.log(cards)
     // }
-    return (
-        <div className="card-container">
-            {
-                cards?.map((c) =>
-                    <div className="card-box">
-                        <div className="card-title">
-                            {c?.title}
-                        </div>
-                        <div className="card-description">
-                            {c?.description}
-                        </div>
-                    </div>
-                )
+    // return (
+    //     <div className="card-container">
+    //         {
+    //             cards?.map((c) =>
+    //                 <div className="card-box">
+    //                     <div className="card-title">
+    //                         {c?.title}
+    //                     </div>
+    //                     <div className="card-description">
+    //                         {c?.description}
+    //                     </div>
+    //                 </div>
+    //             )
 
-            }
-        </div>
-    );
+    //         }
+    //     </div>
+    // );
 }
 export default Card;
 
