@@ -2,44 +2,21 @@ import './css/index.css'
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Admin from './pages/Admin'
-import Home from './Home';
+import Home from './pages/Home';
 import Card from './components/Card';
 import Projects from './pages/Projects'
 import Upperbar from './components/Upperbar'
 import About from './pages/About'
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useParams
-} from "react-router-dom";
+import Router from './Router'
+import { HashRouter } from 'react-router-dom'
 
 
 ReactDOM.render(
   <>
-
-    <Router>
-
+    <HashRouter>
       <Upperbar />
-      <Route exact path="/admin">
-        <Admin />
-      </Route>
-      <Route exact path="/">
-        <Home />
-      </Route>
-      <Route exact path="/card">
-        <Card />
-      </Route>
-      <Route exact path="/projects">
-        <Projects />
-      </Route>
-      <Route exact path="/about">
-        <About />
-      </Route>
-
-
-    </Router>
+      <Router />
+    </HashRouter>
   </>,
   document.getElementById('root')
 );

@@ -1,5 +1,5 @@
-import Card from './components/Card.jsx';
-import Upperbar from './components/Upperbar.jsx'
+import Card from '../components/Card.jsx';
+import Upperbar from '../components/Upperbar.jsx'
 
 
 
