@@ -1,0 +1,24 @@
+.card-container{
+    width: 1000px;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:30px 30px;   
+}
+
+.card-box{
+    width:500px;
+    height:500px;
+    background-color: olive;
+}
+
+.card-title{
+    background-color: red;
+    font-size: 40px;
+    /* z-index: 1; */
+}
+
+.card-description{
+    background-color: blue;
+    font-size: 40px;
+
+}

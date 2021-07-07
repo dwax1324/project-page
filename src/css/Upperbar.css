@@ -1,0 +1,33 @@
+.ub-container{
+    margin-top:200px;
+    height:200px;
+    background-color: red;
+    display:flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.ub-title{
+    height:50px;
+    width: 50px;
+    /* background-color: blue; */
+}
+
+.ub-menu{
+    display: flex;
+    background-color: grey;    
+    justify-content: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.ub-main{
+    padding:20px;
+}
+.ub-pro{
+    padding:20px;
+}
+
+.ub-about{
+    padding:20px;
+}

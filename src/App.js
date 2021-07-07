@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import Card from './components/Card.jsx';
+import Upperbar from './components/Upperbar.jsx'
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Upperbar />
+
     </div>
   );
 }
 
 export default App;
+
+/*
+
+About
+
+Choi Woojong , 최우종
+SungKyunKwan University, 성균관대학교
+major : biological science, 전공 : 생명과학과
+double major : computer science, 복수전공: 융합소프트웨어연계전공
+
+
+
+*/
