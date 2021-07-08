@@ -9,21 +9,11 @@ const Router = () => {
     return (
         <HashRouter>
             <Switch>
-                <Route exact path="/admin">
-                    <Admin />
-                </Route>
-                <Route exact path="/">
-                    <Home />
-                </Route>
-                <Route exact path="/card">
-                    <Card />
-                </Route>
-                <Route exact path="/projects">
-                    <Projects />
-                </Route>
-                <Route exact path="/about">
-                    <About />
-                </Route>
+                <Route exact path="/" component={Home} />
+                <Route exact path="/admin" component={Admin} />
+                <Route exact path="/card" component={Card} />
+                <Route exact path="/projects" component={Projects} />
+                <Route exact path="/about" component={About} />
             </Switch>
         </HashRouter>
     )

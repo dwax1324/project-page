@@ -1,16 +1,16 @@
 .card-container{
     margin: auto;
     width: 1000px;
-    display:grid;
+    display:flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    grid-auto-flow: column;
-    gap:30px 30px;   
 }
 
 .card-box{
-    width:300px;
-    height:300px;
+    width:250px;
+    height:250px;
+    margin:20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -43,7 +43,7 @@ input[id*='popup']{
     display:none;
 }
 input[id*='popup'] + label{
-    /* display: inline-block; */
+    /* display:; */
 }
 input[id*="popup"]+label+div{
     position :fixed;
@@ -56,29 +56,69 @@ input[id*="popup"]+label+div{
 
 
 input[id*="popup"]+label+div >div{
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    width:800px;
-    height:600px;
-    overflow:scroll;
+    position: relative;
+    top:0%;
+    /* left:50%; */
+    /* overflow:scroll; */
+    /* transform: translate(-50%,-50%); */
 
     background-color: white;
     z-index:2;
 }
-input[id*="popup"]+label+div >div > label{
-    position: absolute;
-    top:0%;
-    right:0%;
-    transform:translate(40%,-40%);
-    padding:20px;
-    background-color: red;
-    border-radius: 100%;
-    z-index:1;
+
+.card-popup-window{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* margin-top: 100px; */
+    align-items: center;
 }
 
-input[id*="popup"]+label+div > label{
+/* 삭제버튼 */
+.card-close-button{
+    position:absolute;
+    top:-15px;
+    left: -15px;
+    /* transform:translate(-40%,-40%); */
+    padding:10px;
+    width: 15px;
+    height: 15px;
+    background-color: #FF6058;
+    border-radius: 100%;
+    z-index: 300;
+    content:"\00d7";
+}
+
+.card-close-button:hover{
+    transition: all .5s;
+    /* display: block; */
+    user-select: none;
+    cursor:pointer;
+    transform: rotate(45deg);
+    transform-origin: 50% 50%;
+}
+
+.card-close-button > div{
+    /* display: none; */
+    position:absolute;
+    width: 20px;
+    height: 1px;
+    border-radius: 20%;
+    background-color: black;
+    transform: translate(-2.5px,6px) rotate(45deg);
+}
+
+.card-close-button > div + div{
+    /* display: none; */
+    position: absolute;
+    width: 20px;
+    height: 1px;
+    border-radius: 20%;
+    background-color: black;
+    transform: translate(-2.5px,6px) rotate(-45deg);
+}
+/* 팝업시 뒤 흑색화면 */
+.card-popup-close-background{
     position: absolute;
     top:0;
     left:0;
@@ -86,6 +126,7 @@ input[id*="popup"]+label+div > label{
     height:100%;
     background: rgba(0,0,0,.9);
     z-index:1;
+    cursor: pointer;
 }
 
 input[id*="popup"]+label+div{
@@ -98,4 +139,22 @@ input[id*="popup"]:checked+label+div{
     visibility: visible;
 }
 
+.card-popup{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    white-space: pre-line;
+    line-break: anywhere;
 
+}
+
+.card-popup-gif{
+    width: 80%; 
+    height:80%;
+}
+
+.card-popup-title{
+    height:20px;
+}

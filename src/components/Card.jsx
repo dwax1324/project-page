@@ -22,14 +22,13 @@ function useCard() {
 
 
 
-const imgURL = "https://raw.githubusercontent.com/dwax1324/10print/master/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C%20(1).png"
+
 
 const Card = () => {
-    const getId = (e) => {
-        console.log(e.target);
-    }
-
     let cards = useCard()
+    const [curr, setCurr] = useState([])
+    const [user, setCurrentUser] = useState(null)
+
     return (
         <div className="card-container">
 
@@ -38,21 +37,43 @@ const Card = () => {
                     <div key={c?.id}>
                         <input type="checkbox" id="popup" />
                         <label for="popup">
-                            <div className="card-box" onClick={(e) => getId(e)}>
-                                <img src={c?.img} className="card-img" />
+                            <div className="card-box" >
+                                <img src={c?.img} onClick={() => {
+                                    setCurr(c)
+                                }
+                                } className="card-img" />
                                 <div className="card-title">
                                     {c?.title}
                                 </div>
                             </div>
                         </label>
-                        <div>
-                            <div>
-                                <label for="popup" />
-                                {c?.title}
-                                {c?.description}
-                                <img src={c?.img} />
+                        <div className="card-popup-window">
+                            <div style={{
+                                width: window.screen.width * 0.8,
+                                marginTop: "100px",
+                                marginBottom: "4px",
+                                zIndex: "200",
+                            }}>
+                                <label className="card-close-button" for="popup" >
+                                    <div />
+                                    <div />
+                                </label>
                             </div>
-                            <label for="popup"></label>
+                            <div style={{
+                                width: window.screen.width * 0.8,
+                                height: window.screen.height * 0.7,
+                                overflow: "scroll",
+                            }}>
+                                <div className="card-popup">
+                                    <img className="card-popup-gif" src={curr.img} />
+                                    <div className=".card-popup-title">
+                                        {curr.title}
+                                    </div>
+                                    {curr.description}
+                                    {curr.id}
+                                </div>
+                            </div>
+                            <label className="card-popup-close-background" for="popup" />
                         </div>
 
                     </div>
