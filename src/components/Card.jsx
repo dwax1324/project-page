@@ -24,10 +24,28 @@ function useCard() {
 
 
 
+
+
 const Card = () => {
     let cards = useCard()
     const [curr, setCurr] = useState([])
     const [user, setCurrentUser] = useState(null)
+    const [mode, setMode] = useState("view");
+
+    function handleEdit(e) {
+        // e.preventDefualt()
+        if (mode == 'edit') {
+            setMode('mode')
+        } else {
+            setMode('edit')
+        }
+        console.log(mode)
+    }
+
+    function handleDelete() {
+
+    }
+    console.log(curr.id);
 
     return (
         <div className="card-container">
@@ -42,6 +60,9 @@ const Card = () => {
                                     setCurr(c)
                                 }
                                 } className="card-img" />
+                                {firebase.auth().currentUser !== null ?
+                                    c.id : ""
+                                }
                                 <div className="card-title">
                                     {c?.title}
                                 </div>
@@ -62,15 +83,16 @@ const Card = () => {
                             <div style={{
                                 width: window.screen.width * 0.8,
                                 height: window.screen.height * 0.7,
-                                overflow: "scroll",
+                                backgroundColor: "black",
                             }}>
                                 <div className="card-popup">
                                     <img className="card-popup-gif" src={curr.img} />
-                                    <div className=".card-popup-title">
-                                        {curr.title}
+                                    <div className="card-popup-description">
+                                        <div>
+                                            {curr.description}
+                                        </div>
                                     </div>
-                                    {curr.description}
-                                    {curr.id}
+
                                 </div>
                             </div>
                             <label className="card-popup-close-background" for="popup" />

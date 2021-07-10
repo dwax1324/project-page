@@ -18,7 +18,8 @@
 }
 
 .admin-input-window{
-    background-color: red;
+    background-color: #222;
+    color:#ccc;
     width: 500px;
     height: 400px;
     display: flex;
