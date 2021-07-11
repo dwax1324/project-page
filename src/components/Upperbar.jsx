@@ -18,7 +18,7 @@ const Upperbar = () => {
                 </button>
                 <div className="ub-title">
                     <p>
-                        Woojong's track
+                        Woojong's trail
                     </p>
                 </div>
             </div>
