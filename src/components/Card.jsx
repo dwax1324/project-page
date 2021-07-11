@@ -29,23 +29,8 @@ function useCard() {
 const Card = () => {
     let cards = useCard()
     const [curr, setCurr] = useState([])
-    const [user, setCurrentUser] = useState(null)
-    const [mode, setMode] = useState("view");
 
-    function handleEdit(e) {
-        // e.preventDefualt()
-        if (mode == 'edit') {
-            setMode('mode')
-        } else {
-            setMode('edit')
-        }
-        console.log(mode)
-    }
 
-    function handleDelete() {
-
-    }
-    console.log(curr.id);
 
     return (
         <div className="card-container">
@@ -68,34 +53,44 @@ const Card = () => {
                                 </div>
                             </div>
                         </label>
-                        <div className="card-popup-window">
-                            <div style={{
-                                width: window.screen.width * 0.8,
-                                marginTop: "100px",
-                                marginBottom: "4px",
-                                zIndex: "200",
-                            }}>
-                                <label className="card-close-button" for="popup" >
-                                    <div />
-                                    <div />
-                                </label>
-                            </div>
-                            <div style={{
-                                width: window.screen.width * 0.8,
-                                height: window.screen.height * 0.7,
-                                backgroundColor: "black",
-                            }}>
-                                <div className="card-popup">
+                        <div className="card-popup-window"
+                            style={{
+                                position: "fixed",
+                            }}
+                        >
+                            <div>
+                                <div style={{
+                                    backgroundColor: "black",
+                                }}>
+                                    {/* <label className="card-close-button" for="popup" >
+                                        <div />
+                                        <div />
+                                    </label> */}
+                                </div>
+                                <div className="card-popup"
+                                    style={{
+                                        width: document.body.clientWidth * 0.8,
+                                        height: window.screen.height * 0.7,
+                                        margin: "5% auto",
+                                        left: 0,
+                                        right: 0,
+
+                                    }}
+                                >
                                     <img className="card-popup-gif" src={curr.img} />
-                                    <div className="card-popup-description">
-                                        <div>
-                                            {curr.description}
-                                        </div>
+                                    <div
+                                        className="card-popup-description">
+                                        {curr.description}
                                     </div>
 
                                 </div>
                             </div>
-                            <label className="card-popup-close-background" for="popup" />
+                            <label
+                                style={{
+                                    width: window.screen.width * 2,
+                                    height: window.screen.height * 2,
+                                }}
+                                className="card-popup-close-background" for="popup" />
                         </div>
 
                     </div>

@@ -1,9 +1,8 @@
 .admin-container{
     /* width: 1200px; */
-    /* height:1000px; */
+    /* height:2000px; */
     height: auto;
     padding: 50px;
-    margin-top:100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,7 +10,7 @@
     background-color: black;
 }
 .admin-container2{
-    margin-top: 50px;
+    margin-top: 400px;
     width: 80%;
     height:1000px;
     background-color: aqua;
@@ -19,6 +18,7 @@
 
 .admin-input-window{
     background-color: #222;
+    padding:50px;
     color:#ccc;
     width: 500px;
     height: 400px;

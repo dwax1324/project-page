@@ -172,7 +172,11 @@ export default function Admin() {
                                 </div>
                                 <div>
                                     description
-                                    <textarea type="text" value={editDescription} onChange={e => setEditDescription(e.currentTarget.value)} />
+                                    <textarea style={{
+                                        width: '500px',
+                                        height: '350px',
+
+                                    }} type="text" value={editDescription} onChange={e => setEditDescription(e.currentTarget.value)} />
 
                                 </div>
 

@@ -13,9 +13,10 @@
     margin:20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: top;
     align-items: center;
-    background-color: olive;
+    border:1px solid black;
+    /* background-color: olive; */
 }
 
 .card-box:hover{
@@ -25,13 +26,15 @@
 }
 
 .card-title{
-    background-color: red;
-    font-size: 40px;
+    /* background-color: red; */
+    padding:10px;
+    font-size: 30px;
     /* z-index: 1; */
 }
 
 .card-img{
-    margin:auto;
+    margin:0;
+    padding:0;
     width: 100%;
     height: 80%;
     background-color: blue;
@@ -140,7 +143,7 @@ input[id*="popup"]:checked+label+div{
 }
 
 .card-popup{
-    margin-top: 20px;
+    position: fixed;
     display: flex;
     /* flex-direction: column; */
     align-items: center;
@@ -151,13 +154,32 @@ input[id*="popup"]:checked+label+div{
 
 .card-popup-gif{
     width: 50%; 
-    height:50%;
+    height: auto;
     padding:50px;
     user-select: none;
     -webkit-user-drag: none;
 }
 
 .card-popup-description{
+    width:50%;
     height:50%;
     color:white;
+    overflow-y:auto;
+    border: 1px solid black;
+    padding:20px;   
+    margin-right: 20px;
+}
+
+.card-popup-description::-webkit-scrollbar {
+    width: 12px;
+}
+
+.card-popup-description::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgb(255, 255, 255); 
+    border-radius: 10px;
+}
+
+.card-popup-description::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
 }

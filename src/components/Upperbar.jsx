@@ -7,23 +7,23 @@ const Upperbar = () => {
 
                 <div className="ub-title">
                     <p>
-                        XORDEN
+                        Woojong's track
                     </p>
                 </div>
             </div>
 
             <div className="ub-menu">
-                <Link to="/">
+                <Link to="/" style={{ color: '#FFF' }}>
                     <div className='ub-main'>
                         Home
                     </div>
                 </Link>
-                <Link to="/projects">
+                <Link to="/projects" style={{ color: '#FFF' }}>
                     <div className="ub-pro">
                         Projects
                     </div>
                 </Link>
-                <Link to="/about">
+                <Link to="/about" style={{ color: '#FFF' }}>
                     <div className="ub-about">
                         about
                     </div>

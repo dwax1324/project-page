@@ -1,7 +1,7 @@
 .ub-container{
-    margin-top:200px;
     height:200px;
-    background-color: red;
+    background-color:  black;
+    color: #ccc;
     display:flex;
     text-align: center;
     justify-content: center;
@@ -9,8 +9,10 @@
 }
 
 .ub-title{
-    height:50px;
-    width: 50px;
+    font-size: 30px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* height:50px; */
+    /* width: 50px; */
     /* background-color: blue; */
 }
 
@@ -20,14 +22,28 @@
     justify-content: center;
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
+.ub-menu>a{
+    user-select: none;
+    -webkit-user-drag: none;
+
+}
+
+.ub-menu >a > div{
+    padding:20px;
+    border: 1px solid white;
+    margin:10px;
+}
+
+
+.ub-menu >a > div:hover{
+    opacity: .5;
+    transition: all .2s;
+}
 
 .ub-main{
-    padding:20px;
 }
 .ub-pro{
-    padding:20px;
 }
 
 .ub-about{
-    padding:20px;
 }

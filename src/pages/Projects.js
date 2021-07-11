@@ -1,11 +1,21 @@
 import Card from "../components/Card"
+import '../css/project.css'
 
 const Projects = () => {
     return (
         <>
-            <div className="project-container">
-                projects
-                <Card />
+            <div
+                style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    marginTop: "20px",
+                }}
+            >
+                <div className="project-container">
+                    <Card />
+                </div>
             </div>
         </>
     )
