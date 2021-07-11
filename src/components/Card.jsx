@@ -37,11 +37,21 @@ const Card = () => {
 
 
     return (
-        <div className="card-container">
+        <div
+            style={{
+                minHeight: window.screen.height,
+            }}
+            className="card-container">
 
             {
                 cards?.map((c) =>
-                    <div key={c?.id}>
+                    <div
+                        style={{
+                            width: '250px',
+                            height: '250px',
+                            margin: '20px',
+                        }}
+                        key={c?.id}>
                         <input type="checkbox" id="popup" />
                         <label for="popup">
                             <div className="card-box" onClick={(e) => {
@@ -67,10 +77,10 @@ const Card = () => {
                                 <div style={{
                                     backgroundColor: "black",
                                 }}>
-                                    {/* <label className="card-close-button" for="popup" >
+                                    <label className="card-close-button" for="popup" >
                                         <div />
                                         <div />
-                                    </label> */}
+                                    </label>
                                 </div>
                                 <div className="card-popup"
                                     style={{
