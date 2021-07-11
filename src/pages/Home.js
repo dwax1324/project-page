@@ -1,12 +1,19 @@
 import Card from '../components/Card.jsx';
 import Upperbar from '../components/Upperbar.jsx'
+import { useTheme } from '../components/ThemeProvider'
+
+
 
 
 
 
 function Home() {
+  const darkTheme = useTheme();
   return (
-    <div>
+    <div style={{
+      minHeight: window.screen.height,
+      backgroundColor: darkTheme ? "#111" : "#fff"
+    }}>
       home
     </div>
   );

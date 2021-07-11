@@ -154,7 +154,7 @@ input[id*="popup"]:checked+label+div{
 
 .card-popup-gif{
     width: 50%; 
-    height: auto;
+    max-height: 80%;
     padding:50px;
     user-select: none;
     -webkit-user-drag: none;

@@ -30,6 +30,10 @@ const Card = () => {
     let cards = useCard()
     const [curr, setCurr] = useState([])
 
+    const setScrollTop = (e) => {
+        document.getElementsByClassName("card-popup-description")[0].scrollTop = 0;
+    }
+
 
 
     return (
@@ -40,11 +44,12 @@ const Card = () => {
                     <div key={c?.id}>
                         <input type="checkbox" id="popup" />
                         <label for="popup">
-                            <div className="card-box" >
-                                <img src={c?.img} onClick={() => {
-                                    setCurr(c)
-                                }
-                                } className="card-img" />
+                            <div className="card-box" onClick={(e) => {
+                                setCurr(c)
+                                setScrollTop(e)
+                            }
+                            } >
+                                <img src={c?.img} className="card-img" />
                                 {firebase.auth().currentUser !== null ?
                                     c.id : ""
                                 }

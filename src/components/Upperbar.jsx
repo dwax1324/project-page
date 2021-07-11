@@ -1,10 +1,21 @@
 import "../css/Upperbar.css"
 import { Link } from "react-router-dom"
+import { useTheme, useThemeUpdate } from './ThemeProvider'
 const Upperbar = () => {
+
+    const darkTheme = useTheme();
+    const toggleDarkTheme = useThemeUpdate();
+
+    const themeStyles = {
+        backgroundColor: darkTheme ? '#333' : '#CCC',
+        color: darkTheme ? '#CCC' : '#333'
+    }
     return (
         <>
-            <div className="ub-container">
-
+            <div className="ub-container" style={themeStyles}>
+                <button className="ub-theme-button" onClick={toggleDarkTheme}>
+                    {darkTheme ? '🌙' : '😎'}
+                </button>
                 <div className="ub-title">
                     <p>
                         Woojong's track

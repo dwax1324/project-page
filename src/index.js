@@ -9,13 +9,16 @@ import Upperbar from './components/Upperbar'
 import About from './pages/About'
 import Router from './Router'
 import { HashRouter } from 'react-router-dom'
+import { ThemeProvider } from './components/ThemeProvider'
 
 
 ReactDOM.render(
   <>
     <HashRouter>
-      <Upperbar />
-      <Router />
+      <ThemeProvider>
+        <Upperbar />
+        <Router />
+      </ThemeProvider>
     </HashRouter>
   </>,
   document.getElementById('root')
